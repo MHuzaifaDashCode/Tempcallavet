@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "287250313298",
+    "project_id": "tempcallavet",
+    "storage_bucket": "tempcallavet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287250313298:android:7e96cb08159c821c1b2f8b",
+        "android_client_info": {
+          "package_name": "com.example.tempcallavet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287250313298-gpdidsdb678kd1db38j4l674vst547ti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tempcallavet",
+            "certificate_hash": "63eb3b4875ea33e499d7673264033b63a3825a25"
+          }
+        },
+        {
+          "client_id": "287250313298-ir15h7nefhmdp54o9i7ddhdhc3i523me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzQ9t5ztzqpkgfmUVsSwggAXKZugBAOXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287250313298-ir15h7nefhmdp54o9i7ddhdhc3i523me.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
