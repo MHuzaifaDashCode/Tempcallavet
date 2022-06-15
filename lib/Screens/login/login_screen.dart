@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
   // string for displaying the error Message
-  String? errorMessage;
+  late String errorMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +218,7 @@ class _LoginScreenState extends State<LoginScreen> {
           default:
             errorMessage = "An undefined Error happened.";
         }
-        Fluttertoast.showToast(msg: errorMessage!);
+        Fluttertoast.showToast(msg: errorMessage);
         print(error.code);
       }
     }

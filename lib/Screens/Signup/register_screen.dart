@@ -17,7 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   final _auth = FirebaseAuth.instance;
   
   // string for displaying the error Message
-  String? errorMessage;
+  late String errorMessage;
 
   bool _isObscure = true;
   bool _isObscure2 = true;
@@ -331,7 +331,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             .createUserWithEmailAndPassword(email: email, password: password)
             .then((value) => {postDetailsToFirestore(email, roleRegister)})
             .catchError((e) {
-          Fluttertoast.showToast(msg: e!.message);
+          Fluttertoast.showToast(msg: e.message);
         });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
@@ -356,7 +356,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           default:
             errorMessage = "An undefined Error happened.";
         }
-        Fluttertoast.showToast(msg: errorMessage!);
+        Fluttertoast.showToast(msg: errorMessage);
         print(error.code);
       }
     }
@@ -372,8 +372,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     UserModel userModel = UserModel();
 
     // writing all the values
-    userModel.email = user!.email;
-    userModel.uid = user.uid;
+    userModel.uid = user!.uid;
+    userModel.email = user.email;
     userModel.name = firstNameEditingController.text;
     userModel.role = roleRegister;
 

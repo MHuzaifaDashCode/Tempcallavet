@@ -7,6 +7,7 @@ import 'package:tempcallavet/vet.dart';
 
 
 class HomePage extends StatefulWidget {
+  HomePage();
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -32,7 +33,7 @@ class _controState extends State<contro> {
   UserModel loggedInUser = UserModel();
   var roleHome;
   var emaill;
-  var id;
+  var idHome;
   @override
   void initState() {
     super.initState();
@@ -47,19 +48,19 @@ class _controState extends State<contro> {
       setState(() {
         emaill = loggedInUser.email.toString();
         roleHome = loggedInUser.role.toString();
-        id = loggedInUser.uid.toString();
+        idHome = loggedInUser.uid.toString();
       });
     });
   }
 
   routing() {
     if (roleHome == 'Vet') {
-      return Vet(
-        id: id,
+      return VetDoctor(
+        id: idHome,
       );  
     } else {
       return AnimalOwner(
-        id: id,
+        id: idHome,
       );
     }
   }
