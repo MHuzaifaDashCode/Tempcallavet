@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tempcallavet/Account/account_screen.dart';
 import 'package:tempcallavet/Screens/login/login_screen.dart';
+import 'package:tempcallavet/VetDashboard/wallet_screen.dart';
 import 'package:tempcallavet/model/user_model.dart';
 import 'package:tempcallavet/constants.dart';
 import 'common_widget/category_card.dart';
@@ -157,14 +158,7 @@ class _VetHomeScreenState extends State<VetHomeScreen> {
                         CategoryCard(
                           title: "Manage Appointment",
                           img: "assets/images/appointment2.png",
-                          press: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) {
-                                return ManageAppointment();
-                              }),
-                            );                            
-                          },
+                          press: () {},
                         ),
                         CategoryCard(
                           title: "Analytics",
@@ -174,7 +168,14 @@ class _VetHomeScreenState extends State<VetHomeScreen> {
                         CategoryCard(
                           title: "Wallet",
                           img: "assets/images/wallet2.png",
-                          press: () {},
+                          press: () {
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return WalletVet();
+                              }),
+                            ); 
+                          },
                         ),
                         CategoryCard(
                           title: "Acheivements",

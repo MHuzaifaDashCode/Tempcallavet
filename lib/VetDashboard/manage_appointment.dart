@@ -37,6 +37,13 @@ class _ManageAppointmentState extends State<ManageAppointment> {
         backgroundColor: Color(MyColors.primary),
         elevation: 0,
         toolbarHeight: 0,
+          leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.blue),
+          onPressed: () {
+            // passing this to our root
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: SafeArea(
         child: screens[_selectedIndex],

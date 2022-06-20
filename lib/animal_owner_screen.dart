@@ -3,8 +3,12 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tempcallavet/Account/account_screen.dart';
+import 'package:tempcallavet/Animalownerdashboard/animal_screen.dart';
+import 'package:tempcallavet/Animalownerdashboard/map_screen.dart';
 import 'package:tempcallavet/Providers/user_provider.dart';
 import 'package:tempcallavet/Screens/login/login_screen.dart';
+import 'package:tempcallavet/VetDashboard/animal_detail.dart';
+import 'package:tempcallavet/VetDashboard/manage_appointment.dart';
 import 'package:tempcallavet/constants.dart';
 import 'package:tempcallavet/model/user_model.dart';
 import 'package:provider/provider.dart';
@@ -186,12 +190,26 @@ class _AnimalHomeScreenState extends State<AnimalHomeScreen> {
                         CategoryCard(
                           title: "Make Appointment",
                           img: "assets/images/schedule2.png",
-                          press: () {},
+                          press: () {
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return ManageAppointment();
+                              }),
+                            ); 
+                          },
                         ),
                         CategoryCard(
                           title: "Track The vet",
                           img: "assets/images/track2.png",
-                          press: () {},
+                          press: () {
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return MapScreen();
+                              }),
+                            ); 
+                          },
                         ),
                         CategoryCard(
                           title: "Payment Method",
@@ -201,7 +219,14 @@ class _AnimalHomeScreenState extends State<AnimalHomeScreen> {
                         CategoryCard(
                           title: "Animal Detail",
                           img: "assets/images/animal detail2.png",
-                          press: () {},
+                          press: () {
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return AnimalScreen();
+                              }),
+                            );                             
+                          },
                         ),
                       ],
                     ),
